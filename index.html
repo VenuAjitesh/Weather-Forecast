@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Weather</title>
+
+
+</head>
+<body>
+    <h2 class="sevendaysh">SEVEN DAYS FORECAST :  </h2>
+       <img src="pngtree-hand-drawn-blue-sky-white-clouds-weather-forecast-illustration-background-image_270899.jpg" alt="x" class="back"> 
+    <h2 class="heading">WEATHER FORECAST</h2>
+    <img src="location1.png" alt="x" class="locimg">
+    <div class="getLoc">
+
+        <button id="getLocation" onclick="fetchLocation()">Current Location</button>
+        <div class="tempa">
+        <div class="or" style="font-size: 1.5em"> (or) </div>
+    </div>
+        <div id="selectLocation">
+            <div>
+            <select name="country" class="countries" id="countryId">
+                <option value="">Select Country</option>
+            </select>
+        </div>
+        <div>
+
+            <select name="state" class="states" id="stateId">
+                <option value="">Select State</option>
+            </select>
+        </div>
+        <div>
+        
+            <select name="city" class="cities" id="cityId" onchange="manualFetch()">
+                <option value="">Select City</option>
+            </select>
+        </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="result">
+        <h3 class="location">Location:</h2>
+       
+        <div class="status1">
+            <div class="status"></div>   
+        </div>
+        <div class=temp1>
+        <div class="temp">Temperature:</div>
+    </div>
+    <div class="gust1">
+        <div class="gust">Wind Speed:</div>
+    </div>
+    <div class="humidity1">
+        <div class="humidity">humidity:</div>
+    </div>
+        <div class="lastUpdated">Last Updated</div>
+    </div>
+<button id="myBtn">About</button>
+
+<div id="myModal" class="modal">
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Hello Enthusiasts
+             this is from Developer <b>  VenuAjitesh</b> <br>
+            In this project you can check the current weather,If the location is not tracable you can set the Location Manually <br>
+        this project also shows Seven Days forecast with the help of Graph <br>
+    ThankYou Hope You Enjoy</p>
+    
+</div>
+
+</div>
+
+<button id="myBtnB">Contact</button>
+
+<div id="myModal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="contact">
+            <h2>DEVELOPED BY:</h2>
+            <p>G VENU AJITESH <br> WD04-MB12 <br>NIT_NAGALAND <br> venuajitesh@gmail.com </p>
+        </p>
+</div>
+
+</div>
+      <div class="sevenDays" style="position: absolute;">
+
+      </div>
+      <div class="chart">
+        <div id="curve_chart"style="min-width: 200vh; height: 30em"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script src="//geodata.solutions/includes/countrystatecity.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="chart.js"></script>
+    
+    
+</body>
+</html>
